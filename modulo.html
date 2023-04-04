@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Modulo</h2>
+    <input style="width: 60px ; height: 40px;" type="text" id="input">
+    <input style="width: 30px ; height: 30px; text-align: center" value="%" id="opp">
+    <input style="width: 30px ; height: 30px; text-align: center" value="2" id="div">
+    <button onclick="cal()">calculate</button>
+    <h1 id="output"></h1>
+</body>
+<script>
+
+    // initialize functions to check if a number is even
+    let a=document.getElementById('input')
+    let div=document.getElementById('2')
+    let output=document.getElementById('output')
+
+    function cal(){
+        if(a % 2 === 0){
+            output.innerHTML= True
+        }
+        // if the number is odd, return False
+        else {
+            output.innerHTML= False
+        }
+    }
+
+</script>
+
+</html>

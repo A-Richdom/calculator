@@ -1,0 +1,82 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="calculator.css">
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
+</head>
+
+<body>
+    <div class="calWrapper">
+        <div class="TopH">
+            <h5>Calculator</h5>
+            <div class="right">
+                <i class="bi bi-dash-lg"></i>
+                <i class="bi bi-square"></i>
+                <i class="bi bi-x-lg"></i>
+            </div>
+        </div>
+        <div class="topH">
+            <div class="left">
+                <i class="bi bi-list"></i>
+                <h3>Standard</h3>
+                <i class="bi bi-fullscreen-exit"></i>
+            </div>
+            <i class="bi bi-arrow-clockwise"></i>
+        </div>
+
+        <form id="lcdForm">
+            <!-- .value is used when input or div are used while innerHTML or innerTest for h, p -->
+            <!-- <h1 class="Show" type></h1> --> 
+            <!-- <input disabled class="Show" type="text" value="0" alt="displayArea" id="smallS">/ -->
+            <h6 id="display1"></h6>
+            <h1 id="display2">0</h1>
+        </form>
+
+        <div class="calBtn" id="Mbtn">
+            <button class="disable" attribute="disabled" value="MC">MC</button>
+            <button class="disable" attribute="disabled" value="MR">MR</button>
+            <button class="Mbt" value="M+">M+</button>
+            <button class="Mbt" value="M-">M-</button>
+            <button class="Mbt" value="MS">MS</button>
+            <button class="disable" value="">M<i class="bi bi-caret-down-fill"></i></button>
+        </div>
+
+        <div class="calBtn" id="symBtn">
+            <button class="symbols" attribute="function" onclick="operator('%')" value="%">%</button>
+            <button class="symbols" attribute="function" onclick="operator('CE')" value="CE">CE</button>
+            <button class="symbols" attribute="function" onclick="clearScreen()" value="C">C</button>
+            <button class="symbols" attribute="function" onclick="backspace()" value=""><i
+                    class="bi bi-backspace"></i></button>
+            <button class="symbols" attribute="function" onclick="operator()" value="1/x">1/x</button>
+            <button class="symbols" attribute="function" onclick="operator()" value="x">x2</button>
+            <button class="symbols" attribute="function" onclick="operator('&#8730')" value="&#8730">&#8730</button>
+            <button class="symbols" attribute="function" onclick="operator('/')" value="/">/</button>
+
+            <button class="num" onclick="display(7)" value="7">7</button>
+            <button class="num" onclick="display(8)" value="8">8</button>
+            <button class="num" onclick="display(9)" value="9">9</button>
+            <button class="operator" onclick="operator('*')" value="X" id="symBtn">X</button>
+            <button class="num" onclick="display(4)" value="4">4</button>
+            <button class="num" onclick="display(5)" value="5">5</button>
+            <button class="num" onclick="display(6)" value="6">6</button>
+            <button class="operationM" onclick="operator('-')" value="" id="symBtn"><i
+                    class="bi bi-dash-lg bg-dark"></i></button>
+            <button class="num" onclick="display(1)" value="1">1</button>
+            <button class="num" onclick="display(2)" value="2">2</button>
+            <button class="num" onclick="display(3)" value="3">3</button>
+            <button class="operator" onclick="operator('+')" value="+" id="symBtn">+</button>
+            <button class="num" onclick="operator('')" value=""><i class="bi bi-plus-slash-minus"></i></button>
+            <button class="num" onclick="display(0)" value="0">0</button>
+            <button class="num" onclick="display('.')" value=".">.</button>
+            <button class="operationR" onclick="calculte()" value="=" id="symBtn">=</button>
+        </div>
+    </div>
+    <script src="calc.js"></script>
+</body>
+
+</html>
